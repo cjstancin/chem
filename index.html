@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chemistry</title>
+    <h1>Chemistry Formulas</h1>
+    <button id = 'AS' type='button'>Atomic Stucture</button>
+    <button id = 'AB' type='button'>Acids and Bases</button>
+    <button id = 'GLS' type='button'>Gases, Liquids, and Solutions</button>
+    <button id = 'TD' type='button'>Thermodynamics</button>
+</head>
+<body>
+    <script src="final.js"></script>
+    
+    <button id='AS1'>E=hv</button>
+    
+    <input id="energy" type="number" placeholder="Energy">
+    <p id='enequal'>= 6.626 x 10<sup>-34</sup></p>
+    <input id="frequency" type="number" placeholder="Frequency">
+    <button id='ecalculate1'>Calculate!</button><br>
+    
+    <button id='AS2'>c=λv</button>
+    
+    <p id='spequal'> 2.998 x 10<sup>8</sup>=</p>
+    <input id="wavelength" type="number" placeholder="Wavelength">
+    <input id="frequencyy" type="number" placeholder="Frequency">
+    <button id='ecalculate2'>Calculate!</button><br>
+
+    <button id="ph1">14 = pH + pOH</button>
+
+    <p id="phequal">14 =</p>
+    <input id = "ph_input" type="number" placeholder="pH">
+    <p id='add_ph'> + </p>
+    <input id = "poh_input" type="number" placeholder="pOH">
+    <button id='pcalculate1'>Calculate!</button><br>
+
+    <button id="ph2">pH = -log[H<sup>+</sup>]</button>
+
+    <input id = "ph_input2" type="number" placeholder="pH">
+    <p id="phequals"> = -log</p>
+    <input id='h_plus' type="number" placeholder="H plus">
+    <button id='pcalculate2'>Calculate!</button><br>
+
+    <button id ="gls1">PV = nRT</button>
+
+    <input id = "p" type="number" placeholder="Pressure">
+    <input id = "v" type="number" placeholder="Volume">
+    <p id="glequal">=</p>
+    <input id = "n" type="number" placeholder="Moles">
+    <p id = "r">R</p>
+    <input id = "t" type="number" placeholder="Temperature in Kelvin">
+    <button id='gcalculate1'>Calculate!</button><br>
+
+    <button id="gls2">K = C + 273</button>
+
+    <input id="k" type="number" placeholder="Kelvin">
+    <p id="glequals">=</p>
+    <input id="c" type="number" placeholder="Celsius">
+    <p id='c_plus'>+ 273</p>
+    <button id='gcalculate2'>Calculate!</button><br>
+
+    <button id="td1">q =mc∆T</button>
+
+    <input id ="q" type="number" placeholder="heat">
+    <p id="tequal"> = </p>
+    <input id ="m" type="number" placeholder="mass">
+    <input id ="sp" type="number" placeholder="Specific Heat">
+    <input id ="ct" type="number" placeholder="Change in Temperature">
+    <button id='tcalculate1'>Calculate!</button><br>
+
+    <button id="td2">l = q/t</button>
+    
+    <input id ="l" type="number" placeholder="Current">
+    <p id = "tequals"> = </p>
+    <input id ="char" type="number" placeholder="Charge">
+    <input id ="tim" type="number" placeholder="Time">
+    <button id='tcalculate2'>Calculate!</button><br>
+
+    <button id="reset" onclick="window.location.reload();">Reset</button>
+</body>
+</html>
