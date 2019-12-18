@@ -2,7 +2,7 @@ function ready(){
     no_display();
     AS.onclick = function(){
         console.log(this)
-        if (this.classList.contains('change_color')) {
+        if (this.classList.contains('change_color')) { //learned what this does
             this.classList.remove('change_color')
             console.log("nas");
         } else {
@@ -175,7 +175,7 @@ function ready(){
     }
 
     TD.onclick = function(){
-        if (this.classList.contains('change_color')) {
+        if (this.classList.contains('change_color')) { 
             this.classList.remove('change_color')
             console.log("nas");
         } else {
@@ -302,9 +302,9 @@ function ready(){
     ecalculate1.onclick = function(){
         let energy = document.getElementById('energy').value;
         let frequency = document.getElementById('frequency').value;
-        energy = parseFloat(energy);
+        energy = parseFloat(energy); //Learned what Parse float mean
         frequency = parseFloat(frequency);
-        if (isNaN(energy) && !isNaN(frequency)) {
+        if (isNaN(energy) && !isNaN(frequency)) { //learned what isNaN does
             let eng = frequency * 6.626*(10**-34);
             document.getElementById('energy').value = eng;
             console.log(eng);
