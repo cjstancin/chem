@@ -1,6 +1,13 @@
 function ready(){
     no_display();
     AS.onclick = function(){
+        console.log(this)
+        if (this.classList.contains('change_color')) {
+            this.classList.remove('change_color')
+            console.log("nas");
+        } else {
+            this.classList.add('change_color')
+        }
         if (document.getElementById("AS1").style.display == "none") {
             document.getElementById("AS1").style.display = "block"; 
             console.log("Atomic Structure first open")
@@ -50,6 +57,12 @@ function ready(){
     }
 
     AB.onclick = function(){
+        if (this.classList.contains('change_color')) {
+            this.classList.remove('change_color')
+            console.log("nas");
+        } else {
+            this.classList.add('change_color')
+        }
         if (document.getElementById("ph1").style.display == "none") {
             document.getElementById("ph1").style.display = "block"; 
             console.log("Acid Bases first open")
@@ -102,6 +115,12 @@ function ready(){
     }
 
     GLS.onclick = function(){
+        if (this.classList.contains('change_color')) {
+            this.classList.remove('change_color')
+            console.log("nas");
+        } else {
+            this.classList.add('change_color')
+        }
         if (document.getElementById("gls1").style.display == "none") {
             document.getElementById("gls1").style.display = "block"; 
             console.log("Gases Liquids first open")
@@ -156,6 +175,12 @@ function ready(){
     }
 
     TD.onclick = function(){
+        if (this.classList.contains('change_color')) {
+            this.classList.remove('change_color')
+            console.log("nas");
+        } else {
+            this.classList.add('change_color')
+        }
         if (document.getElementById("td1").style.display == "none") {
             document.getElementById("td1").style.display = "block"; 
             console.log("Thermodynamics first open")
@@ -214,117 +239,65 @@ function ready(){
         no_display_for_td();
     }
 
+    let z = 0
+
     function no_display_for_as(){
-        document.getElementById("AS1").style.display = "none";
-        document.getElementById("AS2").style.display = "none";
-        document.getElementById("energy").style.display = "none";
-        document.getElementById("enequal").style.display = "none";
-        document.getElementById("frequency").style.display = "none";
-        document.getElementById("wavelength").style.display = "none";
-        document.getElementById("spequal").style.display = "none";
-        document.getElementById("frequencyy").style.display = "none";
-        document.getElementById("ecalculate1").style.display = "none";
-        document.getElementById("ecalculate2").style.display = "none";
+        let ids_as = ['AS1', 'AS2', 'energy', 'enequal', 'frequency', 'wavelength', 'spequal', 'frequencyy', 'ecalculate1', 'ecalculate2']
+        for (let id of ids_as) {
+            document.getElementById(id).style.display = "none";
+        }
     }
 
     function no_display_for_ab(){
-        document.getElementById("ph1").style.display = "none";
-        document.getElementById("ph2").style.display = "none";
-        document.getElementById("phequal").style.display = "none";
-        document.getElementById("ph_input").style.display = "none";
-        document.getElementById("add_ph").style.display = "none";
-        document.getElementById("poh_input").style.display = "none";
-        document.getElementById("ph_input2").style.display = "none";
-        document.getElementById("phequals").style.display = "none";
-        document.getElementById("h_plus").style.display = "none";
-        document.getElementById("pcalculate1").style.display = "none";
-        document.getElementById("pcalculate2").style.display = "none";
+        let ids_ab = ['ph1', 'ph2', 'phequal', 'ph_input', 'add_ph', 'poh_input', 'ph_input2', 'phequals' ,'h_plus', 'pcalculate1', 'pcalculate2']
+        for (let id of ids_ab) {
+            document.getElementById(id).style.display = "none";    
+        }
     }
 
     function no_display_for_gls(){
-        document.getElementById("gls1").style.display = "none";
-        document.getElementById("gls2").style.display = "none";
-        document.getElementById("p").style.display = "none";
-        document.getElementById("v").style.display = "none";
-        document.getElementById("glequal").style.display = "none";
-        document.getElementById("n").style.display = "none";
-        document.getElementById("r").style.display = "none";
-        document.getElementById("t").style.display = "none";
-        document.getElementById("k").style.display = "none";
-        document.getElementById("glequals").style.display = "none";
-        document.getElementById("c").style.display = "none";
-        document.getElementById("c_plus").style.display = "none";
-        document.getElementById("gcalculate1").style.display = "none";
-        document.getElementById("gcalculate2").style.display = "none";
+        let ids_gls = ['gls1', 'gls2', 'p', 'v', 'glequal', 'n', 'r', 't', 'k', 'glequals','c', 'c_plus', 'gcalculate1', 'gcalculate2']
+        for (let id of ids_gls) {
+            document.getElementById(id).style.display = "none";
+        }
     }
 
     function no_display_for_td(){
-        document.getElementById("td1").style.display = "none";
-        document.getElementById("td2").style.display = "none";
-        document.getElementById("q").style.display = "none";
-        document.getElementById("tequal").style.display = "none";
-        document.getElementById("m").style.display = "none";
-        document.getElementById("sp").style.display = "none";
-        document.getElementById("ct").style.display = "none";
-        document.getElementById("l").style.display = "none";
-        document.getElementById("tequals").style.display = "none";
-        document.getElementById("char").style.display = "none";
-        document.getElementById("tim").style.display = "none";
-        document.getElementById("tcalculate1").style.display = "none";
-        document.getElementById("tcalculate2").style.display = "none";
+        let ids_td = ['td1', 'td2', 'q', 'tequal', 'm', 'sp', 'ct', 'l', 'tequals', 'char', 'tim', 'tcalculate1', 'tcalculate2']
+        for (let id of ids_td) {
+            document.getElementById(id).style.display = "none";
+        }
     }
 
     function no_display_after_close_as(){
-        document.getElementById("energy").style.display = "none";
-        document.getElementById("enequal").style.display = "none";
-        document.getElementById("frequency").style.display = "none";
-        document.getElementById("ecalculate1").style.display = "none";
-        document.getElementById("ecalculate2").style.display = "none";
-        document.getElementById("wavelength").style.display = "none";
-        document.getElementById("spequal").style.display = "none";
-        document.getElementById("frequencyy").style.display = "none";
+        let ids_as_close = ['energy', 'enequal', 'frequency', 'wavelength', 'spequal', 'frequencyy', 'ecalculate1', 'ecalculate2']
+        for (let id of ids_as_close) {
+            document.getElementById(id).style.display = "none";
+        }
     }
 
     function no_display_after_close_ab(){
-        document.getElementById("phequal").style.display = "none";
-        document.getElementById("ph_input").style.display = "none";
-        document.getElementById("add_ph").style.display = "none";
-        document.getElementById("poh_input").style.display = "none";
-        document.getElementById("ph_input2").style.display = "none";
-        document.getElementById("phequals").style.display = "none";
-        document.getElementById("h_plus").style.display = "none";
-        document.getElementById("pcalculate2").style.display = "none";
-        document.getElementById("pcalculate1").style.display = "none";
+        let ids_ab_close = ['phequal', 'ph_input', 'add_ph', 'poh_input', 'ph_input2', 'phequals' ,'h_plus', 'pcalculate1', 'pcalculate2']
+        for (let id of ids_ab_close) {
+            document.getElementById(id).style.display = "none";    
+        }
     }
 
     function no_display_after_close_gls(){
-        document.getElementById("p").style.display = "none";
-        document.getElementById("v").style.display = "none";
-        document.getElementById("glequal").style.display = "none";
-        document.getElementById("n").style.display = "none";
-        document.getElementById("r").style.display = "none";
-        document.getElementById("t").style.display = "none";
-        document.getElementById("k").style.display = "none";
-        document.getElementById("glequals").style.display = "none";
-        document.getElementById("c").style.display = "none";
-        document.getElementById("c_plus").style.display = "none";
-        document.getElementById("gcalculate1").style.display = "none";
-        document.getElementById("gcalculate2").style.display = "none";
+        let ids_gls_close = ['p', 'v', 'glequal', 'n', 'r', 't', 'k', 'glequals','c', 'c_plus', 'gcalculate1', 'gcalculate2']
+        for (let id of ids_gls_close) {
+            document.getElementById(id).style.display = "none";
+        }
     }
 
     function no_display_after_close_td(){
-        document.getElementById("q").style.display = "none";
-        document.getElementById("tequal").style.display = "none";
-        document.getElementById("m").style.display = "none";
-        document.getElementById("sp").style.display = "none";
-        document.getElementById("ct").style.display = "none";
-        document.getElementById("l").style.display = "none";
-        document.getElementById("tequals").style.display = "none";
-        document.getElementById("char").style.display = "none";
-        document.getElementById("tim").style.display = "none";
-        document.getElementById("tcalculate1").style.display = "none";
-        document.getElementById("tcalculate2").style.display = "none";
+        let ids_td_close = ['q', 'tequal', 'm', 'sp', 'ct', 'l', 'tequals', 'char', 'tim', 'tcalculate1', 'tcalculate2']
+        for (let id of ids_td_close) {
+            document.getElementById(id).style.display = "none";
+        }
     }
+
+    
 
     ecalculate1.onclick = function(){
         let energy = document.getElementById('energy').value;
@@ -339,6 +312,11 @@ function ready(){
             let fre = energy / 6.626*(10**-34);
             document.getElementById('frequency').value = fre;
             console.log(fre);
+        } else {
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
         };
     }
 
@@ -355,6 +333,11 @@ function ready(){
             let wav = 2.998*(10**8) / frequencyy;
             document.getElementById('wavelength').value = wav;
             console.log(wav);   
+        } else {
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
         };
     }
 
@@ -371,7 +354,12 @@ function ready(){
             let ph_val = 14 - poh;
             document.getElementById('ph_input').value = ph_val;
             console.log(ph); 
-        }
+        } else {
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
+        };
     }
 
     pcalculate2.onclick = function(){
@@ -384,12 +372,15 @@ function ready(){
             document.getElementById('h_plus').value = h_value;
             console.log(h_value);
         } else if (isNaN(ph_input2) && !isNaN(h_plus)) {
-            let ph_value = -1*Math.log10(hplus)
+            let ph_value = -1*Math.log10(h_plus)
             document.getElementById('ph_input2').value = ph_value;
             console.log(ph_value);
-        }else {
-            console.log('ligma')
-        }
+        } else {
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
+        };
     }
 
     gcalculate1.onclick = function(){
@@ -418,8 +409,11 @@ function ready(){
             document.getElementById('t').value = t;
             console.log(t);
         } else {
-            console.log("failed");
-        }
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
+        };
     }
 
     gcalculate2.onclick = function(){
@@ -435,7 +429,73 @@ function ready(){
             let c = kelvin - 273
             document.getElementById('c').value = c;
             console.log(c);
-        }
+        } else {
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
+        };
+    }
+
+    tcalculate1.onclick = function(){
+        let heat = document.getElementById('q').value;
+        let t_mass = document.getElementById('m').value;
+        let sp = document.getElementById('sp').value;
+        let ct = document.getElementById('ct').value;
+        q = parseFloat(heat);
+        m = parseFloat(t_mass);
+        sp = parseFloat(sp);
+        ct = parseFloat(ct);
+        if (isNaN(q) && !isNaN(m) && !isNaN(sp) && !isNaN(ct)) {
+            let q_value = m * sp * ct
+            document.getElementById("q").value = q_value;
+            console.log(q_value);
+        } else if (!isNaN(q) && isNaN(m) && !isNaN(sp) && !isNaN(ct)) {
+            let m_value = q / (sp * ct)
+            document.getElementById("m").value = m_value;
+            console.log(m_value);
+        } else if (!isNaN(q) && !isNaN(m) && isNaN(sp) && !isNaN(ct)) {
+            let sp_value = q / (m * ct)
+            document.getElementById("sp").value = sp_value;
+            console.log(sp_value);
+        } else if (!isNaN(q) && !isNaN(m) && !isNaN(sp) && isNaN(ct)) {
+            let ct_value = q / (m * sp)
+            document.getElementById("ct").value = ct_value;
+            console.log(ct_value);
+        } else {
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
+        };
+    }
+
+    tcalculate2.onclick = function(){
+        let l = document.getElementById('l').value;
+        let charge = document.getElementById('char').value;
+        let time = document.getElementById('tim').value;
+        l = parseFloat(l);
+        charge = parseFloat(charge);
+        time = parseFloat(time);
+
+        if (isNaN(l) && !isNaN(charge) && !isNaN(time)) {
+            let l_value = charge/time;
+            document.getElementById("l").value = l_value;
+            console.log(l_value); 
+        } else if (!isNaN(l) && isNaN(charge) && !isNaN(time)) {
+            let charge_value = l * time;
+            document.getElementById("char").value = charge_value;
+            console.log(charge_value);
+        } else if (!isNaN(l) && !isNaN(charge) && isNaN(time)) {
+            let time_value = charge/l;
+            document.getElementById("tim").value = time_value;
+            console.log(time_value);
+        } else {
+            document.body.style.backgroundColor = "red";
+            setTimeout(()=>{
+                document.body.style.backgroundColor = 'aquamarine'
+            }, 1000)
+        };
     }
 
     
